@@ -12,13 +12,13 @@ export default function Home() {
       <Hero />
 
       <main>
-        <div className="site-main">
+        <div className="w-full max-w-[1200px] mx-auto px-5 md:px-16">
           <EventInfo />
           <Agenda />
           <Format />
           <Location />
-          <RegistrationForm />
         </div>
+        <RegistrationForm />
       </main>
 
       <Footer />

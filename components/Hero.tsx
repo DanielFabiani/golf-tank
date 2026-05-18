@@ -1,41 +1,68 @@
-import Image from 'next/image';
-import { EVENT } from '@/config/event';
-import ArrowRight from '@/components/icons/ArrowRight';
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    <header className="hero" id="inicio">
+    <header
+      className="relative w-full h-svh min-h-[600px] flex items-center justify-center overflow-hidden"
+      id="inicio"
+    >
       <Image
-        className="hero-img"
-        src={EVENT.heroImage}
+        className="absolute inset-0 w-full h-full object-cover object-[center_50%]"
+        src="/campo-hero-bg-horzontal.jpg"
         alt="Vista aérea del campo de golf"
         fill
         priority
         sizes="100vw"
       />
-      <div className="hero-overlay" />
+      <div className="absolute inset-0 bg-black/40 bg-[linear-gradient(to_top,rgba(0,21,3,0.8)_0%,rgba(0,21,3,0.4)_50%,rgba(0,21,3,0.2)_100%)]" />
 
-      <div className="hero-content">
-        {/* Badge de edición */}
-        <div className="hero-badge">
-          <div className="hero-badge-dot" />
-          <span>{EVENT.badgeText}</span>
-        </div>
-
-        {/* Título principal */}
-        <h1 className="hero-title">{EVENT.name}</h1>
-
-        {/* Fecha */}
-        <p className="hero-date">
-          {EVENT.date.display.replace('\\n', ' ')} · {EVENT.date.year}
+      <div className="relative z-[2] flex flex-col items-center text-center px-5">
+        {/* Badge edición */}
+        <p
+          className="text-xl font-semibold tracking-[0.18em] uppercase text-white mb-6 animate-fadeUp"
+          style={{ animationDelay: "0.1s" }}
+        >
+          Edición 1 &nbsp;|&nbsp; 2026
         </p>
 
-        {/* CTA */}
-        <div className="hero-cta">
-          <a className="btn-primary" href="#inscripcion">
-            Reservá tu lugar
-            <ArrowRight />
-          </a>
+        {/* Logo Golf Tank */}
+        <div
+          className="w-[280px] sm:w-[360px] md:w-[440px] animate-fadeUp"
+          style={{ animationDelay: "0.25s" }}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/golf tank.svg"
+            alt="Golf Tank"
+            className="w-full h-auto brightness-0 invert drop-shadow-md"
+          />
+        </div>
+
+        {/* Presentado por */}
+        <p
+          className="text-xl font-semibold tracking-[0.16em] uppercase text-white/80 animate-fadeUp drop-shadow"
+          style={{ animationDelay: "0.4s" }}
+        >
+          Presentado por
+        </p>
+
+        {/* Logos sponsors */}
+        <div
+          className="flex items-center gap-6 animate-fadeUp"
+          style={{ animationDelay: "0.55s" }}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/lakaut.svg"
+            alt="Lakaut"
+            className="h-36 sm:h-44 w-auto brightness-0 invert drop-shadow-md"
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/FID.svg"
+            alt="FID by Lakaut"
+            className="h-36 sm:h-44 w-auto brightness-0 invert drop-shadow-md"
+          />
         </div>
       </div>
     </header>

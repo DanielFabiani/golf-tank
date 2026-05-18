@@ -29,8 +29,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" className={jakarta.variable}>
-      <body>{children}</body>
+    <html lang="es" className={`${jakarta.variable} scroll-smooth`}>
+      <body className="font-sans bg-background text-on-surface antialiased">
+        {children}
+      </body>
     </html>
   );
 }
