@@ -6,45 +6,55 @@
 function doPost(e) {
   try {
     const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-    const data  = JSON.parse(e.postData.contents);
+    const data = JSON.parse(e.postData.contents);
 
     if (sheet.getLastRow() === 0) {
-      const headers = ['Timestamp','Nombre','Apellido','Email','WhatsApp','Handicap','Empresa','Tiene pareja','Pareja'];
+      const headers = [
+        "Nombre",
+        "Apellido",
+        "Email",
+        "WhatsApp",
+        "Handicap",
+        "Empresa",
+      ];
       sheet.appendRow(headers);
       const h = sheet.getRange(1, 1, 1, headers.length);
-      h.setFontWeight('bold');
-      h.setBackground('#002103');
-      h.setFontColor('#ffffff');
+      h.setFontWeight("bold");
+      h.setBackground("#002103");
+      h.setFontColor("#ffffff");
     }
 
     sheet.appendRow([
-      data.timestamp   || new Date().toISOString(),
-      data.nombre      || '',
-      data.apellido    || '',
-      data.email       || '',
-      data.whatsapp    || '',
-      data.handicap    || '',
-      data.empresa     || '',
-      data.tiene_pareja ? 'Sí' : 'No',
-      data.pareja      || '',
+      data.nombre || "",
+      data.apellido || "",
+      data.email || "",
+      data.whatsapp || "",
+      data.handicap || "",
+      data.empresa || "",
     ]);
 
-    return ContentService
-      .createTextOutput(JSON.stringify({ result: 'ok' }))
-      .setMimeType(ContentService.MimeType.JSON);
+    return ContentService.createTextOutput(
+      JSON.stringify({ result: "ok" }),
+    ).setMimeType(ContentService.MimeType.JSON);
   } catch (err) {
-    return ContentService
-      .createTextOutput(JSON.stringify({ result: 'error', message: err.message }))
-      .setMimeType(ContentService.MimeType.JSON);
+    return ContentService.createTextOutput(
+      JSON.stringify({ result: "error", message: err.message }),
+    ).setMimeType(ContentService.MimeType.JSON);
   }
 }
 
 function testDoPost() {
-  const mock = { postData: { contents: JSON.stringify({
-    nombre:'Juan', apellido:'Pérez', email:'juan@test.com',
-    whatsapp:'+54 9 11 1234-5678', handicap:'AAG 135052',
-    empresa:'Empresa SA', tiene_pareja:false, pareja:'',
-    timestamp: new Date().toISOString()
-  })}};
+  const mock = {
+    postData: {
+      contents: JSON.stringify({
+        nombre: "Juan",
+        apellido: "Pérez",
+        email: "juan@test.com",
+        whatsapp: "11 1234-5678",
+        handicap: "AAG 135052",
+        empresa: "Empresa SA",
+      }),
+    },
+  };
   Logger.log(doPost(mock).getContent());
 }
