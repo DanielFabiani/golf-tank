@@ -18,29 +18,41 @@ export default function Hero() {
 
       <div className="relative z-[2] flex flex-col items-center text-center px-5">
         {/* Badge edición */}
+
         <p
           className="text-xl font-semibold tracking-[0.18em] uppercase text-white mb-6 animate-fadeUp"
           style={{ animationDelay: "0.1s" }}
         >
           Edición 1 &nbsp;|&nbsp; 2026
         </p>
+        <p
+          className="text-sm font-light tracking-[0.18em] uppercase text-white/50 mb-6 animate-fadeUp"
+          style={{ animationDelay: "0.1s" }}
+        >
+          Invitación personal no transferible
+        </p>
 
         {/* Logo Golf Tank */}
         <div
-          className="w-[280px] sm:w-[360px] md:w-[440px] animate-fadeUp"
+          className="w-[280px] sm:w-[300px] md:w-[380px] animate-fadeUp flex flex-col items-center justify-center gap-3"
           style={{ animationDelay: "0.25s" }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/golf tank.svg"
+            src="/logo-golf-tank.svg"
             alt="Golf Tank"
+            className="w-full h-auto brightness-0 invert drop-shadow-md"
+          />
+          <img
+            src="by-fourwinds.svg"
+            alt="By Fourwinds"
             className="w-full h-auto brightness-0 invert drop-shadow-md"
           />
         </div>
 
         {/* Presentado por */}
         <p
-          className="text-xl font-semibold tracking-[0.16em] uppercase text-white/80 animate-fadeUp drop-shadow"
+          className="text-xl font-semibold tracking-[0.16em] mt-10 uppercase text-white/80 animate-fadeUp drop-shadow"
           style={{ animationDelay: "0.4s" }}
         >
           Presentado por
@@ -55,13 +67,13 @@ export default function Hero() {
           <img
             src="/lakaut.svg"
             alt="Lakaut"
-            className="h-36 sm:h-44 w-auto brightness-0 invert drop-shadow-md"
+            className="h-20 sm:h-28 w-auto brightness-0 invert drop-shadow-md"
           />
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/FID.svg"
             alt="FID by Lakaut"
-            className="h-36 sm:h-44 w-auto brightness-0 invert drop-shadow-md"
+            className="h-24 sm:h-36 w-auto brightness-0 invert drop-shadow-md"
           />
         </div>
       </div>
