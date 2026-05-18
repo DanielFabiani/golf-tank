@@ -16,7 +16,7 @@ export default function Hero() {
       />
       <div className="absolute inset-0 bg-black/40 bg-[linear-gradient(to_top,rgba(0,21,3,0.8)_0%,rgba(0,21,3,0.4)_50%,rgba(0,21,3,0.2)_100%)]" />
 
-      <div className="relative z-[2] flex flex-col items-center text-center px-5">
+      <div className="relative z-[2] flex flex-col items-center text-center px-5 my-10 sm:mt-0">
         {/* Badge edición */}
 
         <p
@@ -34,7 +34,7 @@ export default function Hero() {
 
         {/* Logo Golf Tank */}
         <div
-          className="w-[280px] sm:w-[300px] md:w-[380px] animate-fadeUp flex flex-col items-center justify-center gap-3"
+          className="w-[220px] sm:w-[300px] md:w-[380px] animate-fadeUp flex flex-col items-center justify-center gap-3"
           style={{ animationDelay: "0.25s" }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
