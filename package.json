@@ -11,7 +11,8 @@
     "check:deps": "node scripts/check-deps-age.mjs"
   },
   "dependencies": {
-    "next": "14.2.3",
+    "@tabler/icons-react": "^3.44.0",
+    "next": "14.2.35",
     "react": "18.3.1",
     "react-dom": "18.3.1"
   },
@@ -30,6 +31,9 @@
     "pnpm": ">=9.0.0"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["sharp", "esbuild"]
+    "onlyBuiltDependencies": [
+      "sharp",
+      "esbuild"
+    ]
   }
 }
