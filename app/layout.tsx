@@ -11,19 +11,38 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://golf-tank.vercel.app'),
   title:       EVENT.meta.title,
   description: EVENT.meta.description,
   openGraph: {
     title:       EVENT.meta.title,
     description: EVENT.meta.description,
-    images:      [EVENT.meta.ogImage],
+    url:         'https://golf-tank.vercel.app',
+    siteName:    EVENT.name,
+    images: [
+      {
+        url:    EVENT.meta.ogImage,
+        width:  1200,
+        height: 630,
+        alt:    EVENT.name,
+        type:   'image/jpeg',
+      },
+    ],
     type:        'website',
+    locale:      'es_AR',
   },
   twitter: {
     card:        'summary_large_image',
     title:       EVENT.meta.title,
     description: EVENT.meta.description,
-    images:      [EVENT.meta.ogImage],
+    images: [
+      {
+        url:    EVENT.meta.ogImage,
+        width:  1200,
+        height: 630,
+        alt:    EVENT.name,
+      },
+    ],
   },
 };
 
