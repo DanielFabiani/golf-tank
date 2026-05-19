@@ -52,7 +52,7 @@ export const EVENT = {
   meta: {
     title:       'Golf Tank — Olivos Golf Club · 27 de Mayo 2026',
     description: 'Torneo por invitación. 20 jugadores. Olivos Golf Club, Buenos Aires',
-    ogImage:     '/og-image.png',
+    ogImage:     '/social-image.png',
   },
 } as const;
 

@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="px-5 py-10 md:px-16 md:py-12 border-t-[0.5px] border-outline-variant flex flex-col items-center">
+    <footer className="px-5 pt-10 pb-6 md:px-16 md:pt-12 md:pb-8 border-t-[0.5px] border-outline-variant flex flex-col items-center">
       <div className="w-full flex flex-col items-center md:flex-row md:justify-between gap-10 md:gap-0">
         {/* Izquierda: Logo */}
         <div className="flex items-center md:w-1/3 md:justify-start">
@@ -77,7 +77,7 @@ export default function Footer() {
       </div>
 
       {/* Firma */}
-      <div className="mt-12 md:mt-16 w-full flex justify-center text-center">
+      <div className="mt-4 pt-3 w-full flex justify-center text-center border-t-[0.5px] border-outline-variant/30">
         <p className="text-[11px] text-on-surface-variant/70 tracking-wide">
           Desarrollado por:{" "}
           <Link
