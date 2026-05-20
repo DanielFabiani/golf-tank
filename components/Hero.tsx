@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <header
-      className="relative w-full h-svh min-h-[600px] flex items-center justify-center overflow-hidden"
+      className="relative w-full h-svh min-h-[580px] sm:min-h-[600px] flex flex-col items-center justify-center py-6 sm:py-0 overflow-hidden"
       id="inicio"
     >
       <Image
@@ -16,17 +16,16 @@ export default function Hero() {
       />
       <div className="absolute inset-0 bg-black/40 bg-[linear-gradient(to_top,rgba(0,21,3,0.8)_0%,rgba(0,21,3,0.4)_50%,rgba(0,21,3,0.2)_100%)]" />
 
-      <div className="relative z-[2] flex flex-col items-center text-center px-5 my-10 sm:mt-10">
+      <div className="relative z-[2] flex flex-col items-center text-center px-5 my-auto sm:my-10 py-2 sm:py-0">
         {/* Badge edición */}
-
         <p
-          className="text-xl font-semibold tracking-[0.18em] uppercase text-white mb-6 animate-fadeUp"
+          className="text-sm sm:text-xl font-semibold tracking-[0.18em] uppercase text-white mb-2 sm:mb-6 animate-fadeUp"
           style={{ animationDelay: "0.1s" }}
         >
           Edición 1 &nbsp;|&nbsp; 2026
         </p>
         <p
-          className="text-sm font-light tracking-[0.18em] uppercase text-white/50 mb-6 animate-fadeUp"
+          className="text-[10px] sm:text-sm font-light tracking-[0.18em] uppercase text-white/50 mb-6 sm:mb-6 animate-fadeUp"
           style={{ animationDelay: "0.1s" }}
         >
           Invitación personal no transferible
@@ -34,7 +33,7 @@ export default function Hero() {
 
         {/* Logo Golf Tank */}
         <div
-          className="w-[80%] sm:w-[70%] md:w-[55%] max-w-[550px] animate-fadeUp flex flex-col items-center justify-center gap-3"
+          className="w-[75%] sm:w-[70%] md:w-[55%] max-w-[550px] animate-fadeUp flex flex-col items-center justify-center gap-2 sm:gap-3"
           style={{ animationDelay: "0.25s" }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -52,7 +51,7 @@ export default function Hero() {
 
         {/* Presentado por */}
         <p
-          className="text-xl font-semibold tracking-[0.16em] mt-10 uppercase text-white/80 animate-fadeUp drop-shadow"
+          className="text-[11px] sm:text-xl font-medium sm:font-semibold tracking-[0.2em] sm:tracking-[0.16em] mt-8 sm:mt-10 uppercase text-white/60 sm:text-white/80 animate-fadeUp drop-shadow"
           style={{ animationDelay: "0.4s" }}
         >
           Presentado por
@@ -60,7 +59,7 @@ export default function Hero() {
 
         {/* Logos sponsors */}
         <div
-          className="flex items-center justify-center gap-6 sm:gap-10 animate-fadeUp w-[85%] sm:w-[70%] md:w-[55%] max-w-[550px]"
+          className="flex items-center justify-center gap-6 sm:gap-10 animate-fadeUp w-[65%] sm:w-[70%] md:w-[55%] max-w-[550px]"
           style={{ animationDelay: "0.55s" }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
