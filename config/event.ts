@@ -10,18 +10,18 @@
 export const EVENT = {
   name:        'Golf Tank',
   edition:     'Edición I · 2026',
-  badgeText:   'Olivos Golf Club · Buenos Aires · Edición I',
+  badgeText:   'Club House Golf Pilará · Buenos Aires · Edición I',
   tagline:     'Golf Tank', 
   date: {
-    display: 'Miércoles\n27 de Mayo', // \n genera salto de línea
+    display: 'jueves\n11 de Junio', // \n genera salto de línea
     year:    '2026',
-    iso:     '2026-05-27',
+    iso:     '2026-06-11',
   },
   venue: {
-    name:     'Olivos Golf Club',
+    name:     'Club House Golf Pilará',
     location: 'Buenos Aires, Argentina',
-    address:  'Ruta Panamericana Km 32, Acceso Norte Ramal Pilar, B1613, Provincia de Buenos Aires',
-    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3289.433315196381!2d-58.698528499999995!3d-34.466530299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca256e7f34467%3A0x309585cd771c9b8c!2sOlivos%20Golf%20Club!5e0!3m2!1ses!2sar!4v1779123022934!5m2!1ses!2sar',
+    address:  'Panamericana km 56,5, B1670 Pilar, Provincia de Buenos Aires',
+    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3289.3319533954177!2d-58.9548731!3d-34.469102299999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc83d7100ad837%3A0x87789a741472c4a2!2sClub%20House%20Golf%20Pilar%C3%A1!5e0!3m2!1ses!2sar!4v1779316656392!5m2!1ses!2sar',
     notes: [
       '40 min desde CABA por Panamericana',
       'Invitación personal no transferible',
@@ -50,8 +50,8 @@ export const EVENT = {
 
   // ── SEO / Meta ────────────────────────────────────────────────
   meta: {
-    title:       'Golf Tank — Olivos Golf Club · 27 de Mayo 2026',
-    description: 'Torneo por invitación. 20 jugadores. Olivos Golf Club, Buenos Aires',
+    title:       'Golf Tank — Club House Golf Pilará · 11 de Junio 2026',
+    description: 'Torneo por invitación. 20 jugadores. Club House Golf Pilará, Buenos Aires',
     ogImage:     '/logo-golf-tank-social.png',
   },
 } as const;
